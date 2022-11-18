@@ -1,41 +1,60 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Weather Dashboard</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.0/css/bootstrap.min.css">
-    <link rel="stylesheet" href="assets/style.css">
-</head>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.0/css/bootstrap.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css"
+    />
+    <link rel="stylesheet" href="assets/style.css" />
+  </head>
 
-<body>
+  <body>
     <header class="jumbotron jumbotron-fluid bg-primary text-light text-center">
-        <h1>Weather Dashboard</h1>
-        <h2 id="timeDisplay"></h2>
+      <h1>Weather Dashboard</h1>
+      <h2 id="timeDisplay"></h2>
     </header>
     <main class="container-fluid">
-        <div class="row">
-            <search class="col-3 bg-light p-3 border">
-                <h3>Search</h3>
-                <input id="searchInput" class="form-control" type="text" placeholder="Enter City Name"
-                    aria-label="default input example">
-                <br>
-                <button id="submitBtn" type="button" class="btn btn-primary btn-sm">Submit</button>
-                <h4>Previous Searches:</h4>
-            </search>
-            <display class="col-9 bg-light p-3 border">
-                <h3>Showing Results for: <h4 id="resultsFor"></h4>
-                </h3>
-                <div id="infoDisplay"></div>
-            </display>
-        </div>
-
+      <div class="row">
+        <search class="col-3 bg-light p-3 border">
+          <h3>Search</h3>
+          <input
+            id="searchInput"
+            class="form-control"
+            type="text"
+            placeholder="Enter City Name"
+            aria-label="default input example"
+          />
+          <br />
+          <button id="submitBtn" type="button" class="btn btn-primary btn-sm">
+            Submit
+          </button>
+          <h4>Previous Searche:</h4>
+          <div id="ps"></div>
+        </search>
+        <display class="col-9 bg-light p-3 border">
+          <h3>
+            Showing Results for:
+            <h4 id="resultsFor"></h4>
+          </h3>
+          <div>
+            <p id="tempDisplay"></p>
+            <p id="feelDisplay"></p>
+            <p id="windDisplay"></p>
+            <p id="humDisaplay"></p>
+          </div>
+        </display>
+      </div>
     </main>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
     <script src="assets/script.js"></script>
-</body>
-
+  </body>
 </html>
